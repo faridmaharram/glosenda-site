@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glosenda - Ödeme Yap</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-send.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">Glosenda</div>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+    </nav>
+</header>
+
+<!-- İçerik Container -->
+<main class="page-container">
+
+    <section class="payment-section">
+        <div class="payment-form">
+
+            <h2>Ödeme Yap</h2>
+            <p class="secure-note">🔒 3D Secure ile güvenli ödeme</p>
+
+            <div class="form-grid">
+                <!-- Sol Bölüm: Alıcı Bilgisi -->
+                <div class="form-column">
+                    <h3>Alıcı Bilgisi</h3>
+                    <label for="recipient">Ad Soyad</label>
+                    <input type="text" id="recipient" placeholder="Alıcının adı">
+
+                    <label for="recipientCard">Kart Numarası</label>
+                    <input type="text" id="recipientCard" placeholder="0000 0000 0000 0000" maxlength="19">
+                </div>
+
+                <!-- Sağ Bölüm: Gönderici Bilgisi + Ödeme -->
+                <div class="form-column">
+                    <h3>Gönderici Bilgisi</h3>
+                    <label for="cardNumber">Kart Numarası</label>
+                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+
+                    <label for="expiry">Son Kullanma Tarihi</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" placeholder="CVC" maxlength="4">
+
+                    <label for="cardName">Kart Sahibi Adı</label>
+                    <input type="text" id="cardName" placeholder="Kart üzerindeki isim">
+
+                    <label for="amount">Tutar</label>
+                    <input type="number" id="amount" placeholder="Gönderilecek tutar">
+
+                    <label for="currency">Para Birimi</label>
+                    <select id="currency">
+                        <option value="try">TRY</option>
+                        <option value="azn">AZN</option>
+                        <option value="usd">USD</option>
+                    </select>
+
+                    <button id="pay-btn">Ödemeyi Onayla</button>
+                    <p id="status"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Glosenda. Tüm hakları saklıdır.</p>
+</footer>
+
+<script src="payment.js"></script>
+</body>
+</html>

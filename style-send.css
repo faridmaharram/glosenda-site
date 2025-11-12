@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #660691;
+    --secondary-color: #9C4DCC;
+    --accent-color: #FFB400;
+    --text-dark: #1C1C1C;
+    --text-medium: #333333;
+    --btn-hover: #4B036A;
+}
+
+body { font-family: 'Montserrat', sans-serif; background-color:#F5F5F5; margin:0; }
+
+header { display:flex; justify-content: space-between; align-items:center; padding:20px 50px; background-color: var(--primary-color); color:white; position: sticky; top:0; z-index:1000; }
+header .logo { font-size:24px; font-weight:700; }
+header nav a { color:white; text-decoration:none; font-weight:600; margin-left:25px; }
+header nav a:hover { color: var(--accent-color); }
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.payment-section { display:flex; justify-content:center; }
+.payment-form { background-color:#fff; padding:40px 30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.15); width:100%; max-width:900px; }
+
+.payment-form h2, .payment-form h3 { color: var(--text-dark); margin-bottom:20px; }
+.payment-form label { display:block; margin-bottom:6px; font-weight:600; }
+.payment-form input, .payment-form select { width:100%; padding:14px; margin-bottom:25px; border-radius:6px; border:1px solid #ccc; font-size:14px; box-sizing:border-box; }
+.payment-form button { background-color: var(--primary-color); color:white; padding:14px 25px; font-weight:700; border:none; border-radius:8px; cursor:pointer; width:100%; font-size:16px; transition: background-color 0.3s; }
+.payment-form button:hover { background-color: var(--btn-hover); }
+.payment-form p#status { text-align:center; font-weight:600; margin-top:15px; }
+.payment-form .secure-note { font-size:14px; color:var(--text-medium); margin-bottom:20px; }
+
+/* Grid layout */
+.form-grid { display:flex; gap:40px; flex-wrap:wrap; }
+.form-column { flex:1; min-width:300px; }
+
+/* Footer */
+footer { text-align:center; padding:30px 20px; background-color: var(--secondary-color); color:white; }
+
+/* Responsive */
+@media(max-width:768px){
+    .form-grid { flex-direction: column; }
+    .page-container { padding:20px 10px; }
+}
